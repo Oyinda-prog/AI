@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors()); 
 
 require('dotenv').config()
-const PORT=process.env.port
+const PORT=process.env.port || 4000
 const apikey=process.env.apikey
 const client = new OpenAI({
     apiKey:apikey, 
