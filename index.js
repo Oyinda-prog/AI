@@ -13,6 +13,11 @@ const client = new OpenAI({
     apiKey:apikey, 
 });
 
+
+app.get('/',(req,res)=>{
+    
+  res.send('Hello world')
+   })
 app.post("/chat", async (req, res) => {
     try {
         const userPrompt = req.body.prompt;
