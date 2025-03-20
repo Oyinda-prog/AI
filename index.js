@@ -4,7 +4,13 @@ import OpenAI from "openai";
 import  dotenv  from "dotenv";
 const app = express();
 app.use(express.json());
-app.use(cors()); 
+app.use(cors({
+    origin: "*", 
+    methods: ["POST", "GET"],
+    allowedHeaders: ["Content-Type"]
+}));
+
+// app.use(cors()); 
 
 dotenv.config()
 
